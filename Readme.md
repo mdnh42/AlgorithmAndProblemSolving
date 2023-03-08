@@ -6,7 +6,7 @@ a process or set of rules to be followed in calculations or other problem-solvin
 ## Introduction to Graphs: Node and Edge
    What is Graph?
    Graph algorithms are a set of instructions that traverse (visits nodes of a) graph. Some algorithms are used to find a specific node or the path between two given nodes.
-image.png
+[https://media.geeksforgeeks.org/wp-content/uploads/20200630111809/graph18.jpg]
 
         = Node and Edge 
         = Variation of Graph 
