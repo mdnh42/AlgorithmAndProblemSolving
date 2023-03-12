@@ -1,12 +1,34 @@
 /*
+Topic: adjacency Matrix 
+0-----1
+    /   \
+    2---3
+
+Total Nodes 4 
+Total Edge = 4 
+Undirected and Unwighted 
+
+Matrix of Node x of Nodes 
+ - 4 x 4 
+
+ Matrix[i][j] = 1
+    if and only f (i->j)
+
+
+0 - 1
+1 - 0
+1 - 2
+2 - 1
+1 - 3
+3 - 1
+2 - 3 
+3 - 2
+
 0 1 0 0 
 1 0 1 1
 0 1 0 1
 0 1 1 0
-Time Complexity: O(n^2)
-Space Complexity: O(n^2)
 */
-
 #include<bits/stdc++.h>
 using namespace std; 
 int main()

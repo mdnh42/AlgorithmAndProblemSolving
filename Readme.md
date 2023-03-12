@@ -78,7 +78,7 @@ a process or set of rules to be followed in calculations or other problem-solvin
 
 
 ## Adjacency List 
-
+    - Time Complexity O()
 
 
 ## Edge List 
