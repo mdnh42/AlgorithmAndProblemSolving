@@ -169,7 +169,41 @@ a process or set of rules to be followed in calculations or other problem-solvin
         Hints:  Base Case NULL String
                 Single String.
                 Return Function 
+
+
+
+
+## Module 06 Lab Class 
+    Fibonacci Using Recursion: 
+
     
+    DFS Pseudocode on Tree: 
+        void dfs(int node)
+        {
+            cout<<node<<"\n";
+            //base case 
+            if node does not have any child: 
+                return 
+
+            // General Case
+            [for all childs of node: dfs(child)]
+            dfs(node.left_child)
+            dfs(node.righ_child)
+
+        }
+
+    
+    DFS Pseudocode and Complexity
+    // Graph 
+    // Visited Array 
+    void dfs(int node)
+    {
+        cout<<node<<"\n"; 
+        visited[node] = 1; 
+        for all adj_node of node: 
+        if visited[adj_node] == 0; 
+            dfs(adj_node)
+    }
     
 
 
