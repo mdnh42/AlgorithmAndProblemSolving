@@ -1,16 +1,19 @@
 # Week 01 Introduction to Graph Algorithm
 # Module: 01 Introduction to Algorithm and Graph Theory 
 ## What is Algorithm? 
-a process or set of rules to be followed in calculations or other problem-solving operations, especially by a computer.
+A process or set of rules to be followed in calculations or other problem-solving operations, especially by a computer.
 
 ## Introduction to Graphs: Node and Edge
    What is Graph?
    Graph algorithms are a set of instructions that traverse (visits nodes of a) graph. Some algorithms are used to find a specific node or the path between two given nodes.
 ![](https://media.geeksforgeeks.org/wp-content/uploads/20200630111809/graph18.jpg)
 
+    
 
     Components of a Graph
         Vertices/Nodes: Vertices are the fundamental units of the graph. Sometimes, vertices are also known as vertex or nodes. Every node/vertex can be labeled or unlabelled.   
+
+
    
     Edges: Edges are drawn or used to connect two nodes of the graph. It can be ordered pair of nodes in a directed graph. Edges can connect any two nodes in any possible way. There are no rules. Sometimes, edges are also known as arcs. Every edge can be labeled/unlabelled.
        
@@ -21,12 +24,12 @@ a process or set of rules to be followed in calculations or other problem-solvin
 
     ![]()
 
-        = Weighted Graph
+        = Weighted Graph (Google Search)
+            
+        = Directed Graph (Google Search)
 
-        = Directed Graph
 
-
-        = Undirected Graph
+        = Undirected Graph (Google Search)
 
         = Bipartitc Graph
         A graph G = (V, E) is said to be a bipartite graph if its vertex set V(G) can be partitioned into two non-empty disjoint subsets. V1(G) and V2(G) in such a way that each edge e of E(G) has one end in V1(G) and another end in V2(G). The partition V1 U V2 = V is called Bipartite of G. Here in the figure: V1(G)={V5, V4, V3} and V2(G)={V1, V2} 
@@ -208,3 +211,12 @@ a process or set of rules to be followed in calculations or other problem-solvin
 
 
     
+
+# Week 03 BFS and DFS Problem Solving 
+## Module - 08 Problem Solving with BFS and DFS 
+    Introduction: 
+        - Single Source Shortest Path 
+        - Grid Traversal with BFS 
+
+    Single Source Shortest Path (SSSP): 
+        [Rememer BFS Level Wise Visited and DFS Depth Wise Vistied]
