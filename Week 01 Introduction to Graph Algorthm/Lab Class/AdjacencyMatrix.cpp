@@ -1,5 +1,9 @@
 /*
 Topic: adjacency Matrix 
+A ---- B
+     /  \
+    c ---d
+
 0-----1
     /   \
     2---3

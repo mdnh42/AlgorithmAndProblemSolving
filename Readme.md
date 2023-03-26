@@ -8,7 +8,7 @@ A process or set of rules to be followed in calculations or other problem-solvin
    Graph algorithms are a set of instructions that traverse (visits nodes of a) graph. Some algorithms are used to find a specific node or the path between two given nodes.
 ![](https://media.geeksforgeeks.org/wp-content/uploads/20200630111809/graph18.jpg)
 
-    
+    NODE + EDGE = GRAPH 
 
     Components of a Graph
         Vertices/Nodes: Vertices are the fundamental units of the graph. Sometimes, vertices are also known as vertex or nodes. Every node/vertex can be labeled or unlabelled.   
@@ -43,6 +43,9 @@ A process or set of rules to be followed in calculations or other problem-solvin
         = Tree Graph
         {No Cycle}
         {Path onece visited}
+        {Connected}
+        {Only One Path}
+        {No have Multi edge}
 
         = Tree Variations 
             - Rooted Tree
@@ -229,5 +232,22 @@ A process or set of rules to be followed in calculations or other problem-solvin
 ## Module 09 PS using BFS and DFS
     - Flood Fil Problem 
     - Graph Coloring Problem 
+        -
+
+## Lab Class 
+    - Cycle Detection in Directed Graph 
+    - Topogical Sorting 
 
 
+
+
+# Week 04 Path Printing & Dijkstra 
+## Module 12 Introduction to Path Printing 
+    - Path Printing 
+    
+
+
+    - Shortest Path on a weighted Graph 
+
+
+    
