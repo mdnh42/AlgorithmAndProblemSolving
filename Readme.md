@@ -224,6 +224,8 @@ A process or set of rules to be followed in calculations or other problem-solvin
     Single Source Shortest Path (SSSP): 
         [Rememer BFS Level Wise Visited and DFS Depth Wise Vistied]
 
+
+
     SSSP CODE Using BFS:
 
     GRID Traversal: 
@@ -245,9 +247,43 @@ A process or set of rules to be followed in calculations or other problem-solvin
 ## Module 12 Introduction to Path Printing 
     - Path Printing 
     
-
-
     - Shortest Path on a weighted Graph 
+      Example about weighted Graph Path Finding.
+
+## Module 13 Dijkstra 
+    - Dijkstra Simulation 
+
+
+
+    - Dijkstra Pseudocode & Complexity 
+        Space Complexity: O(n) + o(n) + o(1) = O(n)
+        TIme Complexity: o(n^2) + o(m) = O(n^2) 
+        
+        // if = d[u] + c(u, v) < d[v]
+                d[v] = d[u] + c(u,v)
+
+        - Input -> Weighted Graph and a Source 
+        - Output -> distance of all nodes from the source 
+        
+        - Create a distance array "d"  // O(n)
+        - Initialize all values of "d" to infinity 
+        - d[src] = 0;
+        - Create a visited array and mark all nodes as unvisited  // O(n)
+        
+
+        - for i = 0 to  n - 1: // o(1), o(n) === O(n^2)
+            - loop over the nodes and pick the "unvisited"node with minimum node d[node]
+            - visited[node] = 1
+            - for all adj_node of node: 
+                - if d[nodes] + c(node, adj_node) < d[adj_node]
+                    = d[adj_node] = d[node] + c(node, adj_node)
+
+        - output array "d"
+
+
+    - Dijkstra Code 
+
+
 
 
     
