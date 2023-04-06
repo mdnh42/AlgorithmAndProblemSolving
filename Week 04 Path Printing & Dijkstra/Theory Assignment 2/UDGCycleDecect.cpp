@@ -1,25 +1,3 @@
-/*
-https://cses.fi/problemset/task/1669
-Cycle Detection 
-
-Input:
-5 6
-1 3
-1 2
-5 3
-1 5
-2 4
-4 5
-
-Output:
-Cycle Exist
-Condition: 
-    1. visited[ajd_node] == 0 ->> unexplored node | apply dfs
-    2. visited[adj_node] == 1 ->> 'paused' node | cycle detected
-    3. visited[adj_node] == 2 ->> "done" node | continue
-
-*/
-
 #include<bits/stdc++.h>
 using namespace std; 
 const int N = 2e6;
@@ -58,6 +36,7 @@ int main()
         int u, v; 
         cin>> u>>v; 
         adj_list[u].push_back(v);
+        adj_list[v].push_back(u);
     }
     bool cycle_exits = false; 
     for(int i = 1; i<= n; i++){

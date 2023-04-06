@@ -272,7 +272,7 @@ A process or set of rules to be followed in calculations or other problem-solvin
         
 
         - for i = 0 to  n - 1: // o(1), o(n) === O(n^2)
-            - loop over the nodes and pick the "unvisited"node with minimum node d[node]
+            - pick the "unvisited"node with minimum node d[node]
             - visited[node] = 1
             - for all adj_node of node: 
                 - if d[nodes] + c(node, adj_node) < d[adj_node]
@@ -282,6 +282,46 @@ A process or set of rules to be followed in calculations or other problem-solvin
 
 
     - Dijkstra Code 
+
+
+## Module Lab Class 
+    - Prioriy Queue
+
+
+    - Optimized - Dijkstra Pseudocode and Complexity 
+
+    - Dijkstra Pseudocode & Complexity 
+        Space Complexity: O(n) + o(n) + o(1) = O(n)
+        TIme Complexity: o(n^2) + o(m) = O(n^2) 
+        
+        // if = d[u] + c(u, v) < d[v]
+                d[v] = d[u] + c(u,v)
+
+        - Input -> Weighted Graph and a Source 
+        - Output -> distance of all nodes from the source 
+        
+        - Create a distance array "d"  // O(n)
+        - Initialize all values of "d" to infinity 
+        - d[src] = 0;
+        - Create a visited array and mark all nodes as unvisited  // O(n)
+        - Take an reverse empty priority_queue "PQ" 
+        - pq.push({0, src})
+        
+
+        - for i = 0 to  n - 1: // o(1), o(n) === O(n^2)
+            - pick the node with minmum distance value =>
+            - pick the "unvisited"node with minimum node d[node]
+            - visited[node] = 1
+            - for all adj_node of node: 
+                - if d[nodes] + c(node, adj_node) < d[adj_node]
+                    = d[adj_node] = d[node] + c(node, adj_node)
+                    - pq.push({d[adj_node], adj_node});
+
+
+        - output array "d"
+
+    - Problem Solving 
+    
 
 
 

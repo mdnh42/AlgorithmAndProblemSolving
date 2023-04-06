@@ -7,21 +7,15 @@ pair<int,int>parent[N][N];
 pair<int,int>start,end_p;
 
 
-
-
 int dx[]={0,0,-1,1};
 int dy[]={1,-1,0,0};
 char dir[4] = { 'R','L','U','D' };
-
-
 
 
 bool is_inside(pair<int,int>coor)
 {
     int x=coor.first;
     int y=coor.second;
-
-
 
 
     if(x>=0 && x<n && y>=0 && y<m)
@@ -32,14 +26,10 @@ bool is_inside(pair<int,int>coor)
 }
 
 
-
-
 bool is_safe(pair<int,int>coor)
 {
     int x=coor.first;
     int y=coor.second;
-
-
 
 
     if(maze[x][y]==-1)
@@ -50,14 +40,10 @@ bool is_safe(pair<int,int>coor)
 }
 
 
-
-
 bool is_border(pair<int,int>coor)
 {
     int x=coor.first;
     int y=coor.second;
-
-
 
 
     if((x==0 || x==n-1) || (y==0 || y==m-1))
@@ -69,8 +55,6 @@ bool is_border(pair<int,int>coor)
         return false;
     }
 }
-
-
 
 
 void bfs(pair<int,int>src)
@@ -88,19 +72,13 @@ void bfs(pair<int,int>src)
         int y=head.second;
 
 
-
-
         for(int i=0;i<4;i++)
         {
             int new_x=x+dx[i];
             int new_y=y+dy[i];
 
 
-
-
             pair<int,int>adj_node={new_x,new_y};
-
-
 
 
             if(is_inside(adj_node) && is_safe(adj_node) && visited[new_x][new_y]==0)
@@ -118,13 +96,9 @@ void bfs(pair<int,int>src)
 }
 
 
-
-
 int main()
 {
     cin>>n>>m;
-
-
 
 
     for(int i=0;i<n;i++)
@@ -145,11 +119,7 @@ int main()
     }
 
 
-
-
     bfs(start);
-
-
 
 
     if(visited[end_p.first][end_p.second])
@@ -187,8 +157,6 @@ int main()
     {
         cout<<"NO"<<"\n";
     }
-
-
 
 
     return 0;

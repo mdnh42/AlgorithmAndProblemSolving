@@ -1,9 +1,64 @@
+/*
+Flood Fil 
+
+https://cses.fi/problemset/task/1192s
+Couting Room 
+
+You are given a map of a building, and your task is to count the number of its rooms. The size of the map is n×m
+ squares, and each square is either floor or wall. You can walk left, right, up, and down through the floor squares.
+
+Input
+
+The first input line has two integers n
+ and m
+: the height and width of the map.
+
+Then there are n
+ lines of m
+ characters describing the map. Each character is either . (floor) or # (wall).
+
+Output
+
+Print one integer: the number of rooms.
+
+Constraints
+1≤n,m≤1000
+
+Example
+
+Input:
+5 8
+########
+#..#...#
+####.#.#
+#..#...#
+########
+
+Output:
+3
+
+*/
+
+
+/*
+Input
+5 8
+########
+#..#...#
+####.#.#
+#..#...#
+########
+
+Output-> 3
+s
+*/
+
 #include <bits/stdc++.h>
 using namespace std;
-
 const int N = 2002;
+
 int maze[N][N], visited[N][N];
-int level[N][N];
+
 
 void bfs(pair<int, int> src)
 {
@@ -73,16 +128,3 @@ int main()
     }
     return 0;
 }
-
-/*
-Input
-5 8
-########
-#..#...#
-####.#.#
-#..#...#
-########
-
-Output-> 3
-s
-*/

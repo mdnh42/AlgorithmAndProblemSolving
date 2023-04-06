@@ -1,21 +1,25 @@
 #include<bits/stdc++.h>
 using namespace std; 
+
 const int N = 1e5;
 
-int visisted[N]; 
+int visited[N]; 
 
 vector<int>adj_list[N];
 
 void dfs(int node)
 {
     cout<<node<<"\n";
-    visisted[node] = 1; 
+    visited[node] = 1; 
+    
     for(int adj_node: adj_list[node]){
-        if(visisted[adj_node] == 0)
+        if(visited[adj_node] == 0)
         {
             dfs(adj_node);
         }
     }
+
+    
 }
 
 int main()
@@ -30,7 +34,8 @@ int main()
         adj_list[u].push_back(v);
         adj_list[v].push_back(u);
     }
-    int src = 0; 
+    int src;
+    cin>>src; 
     dfs(src);
     return 0; 
 }
@@ -51,6 +56,7 @@ list of adj nodes->
 1 5
 2 4
 5 4
+0
 
 6 5
 0 1
