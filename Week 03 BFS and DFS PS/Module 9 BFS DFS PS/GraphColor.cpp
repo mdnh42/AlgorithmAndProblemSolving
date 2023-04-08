@@ -36,15 +36,17 @@ bool dfs(int node)
             else
                 color[adj_node] = 1;
 
-            bool is_bicolorable =  dfs(adj_node);
-            if(!is_bicolorable){
+            bool is_bicolorable = dfs(adj_node);
+            if (!is_bicolorable)
+            {
                 return false;
             }
         }
         else
         {
             // Check if color is same or different
-            if(color[node] == color[adj_node]){
+            if (color[node] == color[adj_node])
+            {
                 return false;
             }
         }
@@ -63,6 +65,7 @@ int main()
         adj_list[u].push_back(v);
         adj_list[v].push_back(u);
     }
+
     bool is_bicolorable = true;
     for (int i = 1; i <= nodes; i++)
     {
@@ -70,21 +73,25 @@ int main()
         {
             color[i] = 1;
             bool ok = dfs(i);
-            if(!ok){
-                is_bicolorable =false;
+            if (!ok)
+            {
+                is_bicolorable = false;
                 break;
             }
         }
     }
 
-    if(!is_bicolorable){
-        cout<<"IMPOSSIBLE"<<'\n';
+    if (!is_bicolorable)
+    {
+        cout << "IMPOSSIBLE" << '\n';
     }
-    else {
-        for(int i=1; i<=nodes; i++ ){
-            cout<<color[i]<<' ';
+    else
+    {
+        for (int i = 1; i <= nodes; i++)
+        {
+            cout << color[i] << ' ';
         }
     }
-    cout<<'\n';
+    cout << '\n';
     return 0;
 }

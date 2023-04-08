@@ -11,6 +11,7 @@ Input
 ########
 
 Output-> 9
+
 #-> -1
 . -> 0
 A to B
@@ -31,7 +32,9 @@ x, Y
 -1 0
 1  0
 
-s
+dx[] = {0, 0, -1, 1}
+dy[] = {1, -1, 0, 0}
+
 
 for(int i=0; i<4; i++)
 {
@@ -57,23 +60,25 @@ int n, m;
 int dx[] = {0, 0, -1, 1};
 int dy[] = {1, -1, 0, 0};
 
-bool is_insde(pair<int, int>coord){
-    int x = coord.first; 
+bool is_insde(pair<int, int> coord)
+{
+    int x = coord.first;
     int y = coord.second;
 
-    if(x>=0 && x<n && y >=0 && y<m){
+    if (x >= 0 && x < n && y >= 0 && y < m)
+    {
         return true;
     }
     return false;
-
 }
 
-bool is_safe(pair<int, int>coord){
-    int x = coord.first; 
+bool is_safe(pair<int, int> coord)
+{
+    int x = coord.first;
     int y = coord.second;
-    if(maze[x][y] == -1){
-        return false; 
-
+    if (maze[x][y] == -1)
+    {
+        return false;
     }
     return true;
 }
@@ -97,35 +102,33 @@ void bfs(pair<int, int> src)
         {
             int new_x = x + dx[i];
             int new_y = y + dy[i];
-            pair<int, int>adj_node = {new_x, new_y};
-            
-            if(is_insde(adj_node) && 
-                is_safe(adj_node) && 
-                visited[new_x][new_y] == 0){
-                
-                visited[new_x][new_y] = 1; 
+
+            pair<int, int> adj_node = {new_x, new_y};
+
+            if (is_insde(adj_node) && is_safe(adj_node) && visited[new_x][new_y] == 0)
+            {
+
+                visited[new_x][new_y] = 1;
                 level[new_x][new_y] = level[x][y] + 1;
                 q.push(adj_node);
-
             }
         }
-
     }
 }
 
 int main()
 {
-    
+
     cin >> n >> m;
 
     pair<int, int> src, dst;
 
-    for(int i=0; i<n; i++)
+    for (int i = 0; i < n; i++)
     {
-        for(int j=0; j<n; j++)
+        for (int j = 0; j < n; j++)
         {
             level[i][j] = -1;
-        }   
+        }
     }
 
     for (int i = 0; i < n; i++)
@@ -161,12 +164,16 @@ int main()
 
     bfs(src);
 
-    if(level[dst.first][dst.second] == -1){
-        cout<<"NO"<<"\n";   
+    if (level[dst.first][dst.second] == -1)
+    {
+        cout << "NO"
+             << "\n";
     }
-    else{
-        cout<<"YES"<<"\n";
-        cout<<level[dst.first][dst.second]<<"\n";
+    else
+    {
+        cout << "YES"
+             << "\n";
+        cout << level[dst.first][dst.second] << "\n";
     }
 
     return 0;
