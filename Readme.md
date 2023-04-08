@@ -328,4 +328,61 @@ A process or set of rules to be followed in calculations or other problem-solvin
 
 
 
-    
+# Week 06 Ballman Ford & Floyd-warshall Algorithm 
+## Module 16 - Introduction to bellman-ford Algorithm 
+    - Dijkstra's Limitations 
+
+
+    - Bellman Ford-Algo's Intuition & simulation 
+
+
+    - Bellman Ford Pesudocode 
+        Input - > a weighted graph & src node (With no negative cycles)
+        Output -> shortest distance from src node to all other nodes. 
+        /*
+            d[u] + c(u, v) <[v]
+            => d[v] = d[u] + c(u, v)
+        */
+        Create a distance array "d" with all values to infinity 
+        - d[src] = 0; 
+
+        for( i = 1 to n-1: )
+        {
+            for all edges "e": 
+                // Relax  e 
+                if(d[u] + w<d[v])
+                    d[v] = d[u] + w; 
+        }
+
+        - print the distance array "d" 
+
+    - Bellman Ford Time Complexity 
+        - o(n)  
+        - o(m)
+        = O(n*m) or o(|v| * |E|)
+
+        = m = n^2 | n^3
+
+
+
+    - Bellman Ford Negative Cycle Detection: 
+        Input - > a weighted graph & src node (With no negative cycles)
+        Output -> shortest distance from src node to all other nodes. 
+        /*
+            d[u] + c(u, v) <[v]
+            => d[v] = d[u] + c(u, v)
+        */
+        Create a distance array "d" with all values to infinity 
+        - d[src] = 0; 
+        negetive_cyle = false
+        for( i = 1 to n-1: )
+        {
+            for all edges "e": 
+                // Relax  e 
+                if(d[u] + w<d[v])
+                    d[v] = d[u] + w; 
+                    if i == n: 
+                        negetive_cyle = true; 
+        }
+        - Print whether negative cycle exists 
+        - print the distance array "d" 
