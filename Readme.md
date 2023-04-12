@@ -386,3 +386,107 @@ A process or set of rules to be followed in calculations or other problem-solvin
         }
         - Print whether negative cycle exists 
         - print the distance array "d" 
+
+
+
+## Module 17 Bellman-Ford Path Printing  
+    - Introduction 
+
+    - Path Printing 
+
+
+    - Cycle Printing 
+
+
+    - Pseudocode & Complexity 
+        Input - > a weighted graph & src node (With no negative cycles)
+        Output -> shortest distance from src node to all other nodes. 
+        /*
+            d[u] + c(u, v) <[v]
+            => d[v] = d[u] + c(u, v)
+        */
+        Create a distance array "d" with all values to infinity 
+        - Create a Parent Array 
+        - d[src] = 0; 
+        negetive_cyle = false
+        for( i = 1 to n-1: )
+        {
+            for all edges "e": 
+                // Relax  e 
+                if(d[u] + w<d[v])
+                    d[v] = d[u] + w;
+                    Parent[v] = u;  
+                    if i == n: 
+                        negetive_cyle = true; 
+        }
+        - Print whether negative cycle exists 
+
+        if negative cycle = false; 
+
+            - print the distance array "d" 
+            - Destination_node = n; 
+            - declare a vector path 
+            while true: 
+                path.push_back(selected_node)
+                - selected_node = = src; 
+                break; 
+                - selected_node = parent[Selected_node]
+            - reverse the vector path 
+            - print hte path 
+
+        else: 
+
+            - print negative cycle exist: 
+            
+
+    - Code 
+
+## Floyd-Warshall (Lab Class)
+
+    - All Apir Shortest Path 
+        - BFS - O(V+E) (Ordinary Graph like Unweigted)
+        -- Dijkstra - O(V^2) -> O(ElogV) (Weighted Graph)
+        - Bellman-Ford - O(V^3) (Negative Weigtehd)
+        
+
+        - Floyd-Warshall Algorithm 
+            - Incremental Algorithm 
+
+    - Floyd-Warshall Simulation 
+
+
+    - Pseudocode & Complexity 
+        - Input -> A weighted graph as an adjcancy Matrix
+        - Output -> All pair shortest distance 
+
+        - Create a distance Matrix "d" where d[i][j] = x where there is a direct edge from node "i" to node "j" and the cost is "x" 
+        - For all node "i" d[i][i] = 0;
+        - For all nodes "i" & "j" where there isn't any direct edge from i -> j,
+            d[i][j] = INF; 
+
+        - for all node "k" 
+            - for all node "u"
+                -  for all node "v" 
+                    -d[u][v] = min(d[u][v], d[u][k] + d[k][v])
+        
+        - Output all pair shortest distence "d" 
+
+
+    ==================== Complexity =======
+    Time:   Adj_mat = O(v^2)
+            O(v^3)
+
+        TIme Complexity: O(v^3)
+
+    Space: O(v^2)
+
+
+
+    - Code 
+
+
+
+    - Problem Solving 
+
+
+
