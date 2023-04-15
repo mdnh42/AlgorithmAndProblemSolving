@@ -490,3 +490,38 @@ A process or set of rules to be followed in calculations or other problem-solvin
 
 
 
+# Week 07: Introduction to Dynamic Programming 
+## Introduction to Dynamic Programming 
+    1. Introduction 
+        Dynamic Programming 
+        Prerequisite 
+            1. Recursion
+            2. Complexity Analysis 
+
+    2. Back to Fibonacci!! 
+        Fibonacci!! 
+        1, 1, 2, 3, 5, 8, 13, 21, 34 ...... 
+        nTh Fibonacci?
+        fib(n){
+            base case: 
+            if (n<=2) return 1
+
+            return fib(n-1) + fib(n-2)
+        }
+    3. Simulation 
+        Fibonacci 
+        Fib(n-1) + fib(n-2) 
+        TIme COmplexity: O(2^n)
+
+        linear Callstack O(n)
+
+
+    4. Lets Optimize 
+        Optimization: 
+            
+
+    5. Code 
+
+
+
+
