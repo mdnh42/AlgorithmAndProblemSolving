@@ -524,4 +524,44 @@ A process or set of rules to be followed in calculations or other problem-solvin
 
 
 
+## Module 21 Solving DP 
+    - How to Solve DP 
+        DP Step: 
+            1.  Define State
+            2.  Identify the Recursive equation from 
+                the smaller subproblem 
+            3.  Define base cases 
+
+         Two ways solve Problem using DP 
+            1. Memoization/ Recursive/ Top-Down 
+            2. Tabulation/Iterative/Bottom-up
+
+    - Tabulation and Memoization in Code 
+
+            # Memoization-Method (Recursive)
+            ================================
+                1. Handle Base Case 
+                2. If Current state is already solved, return the result 
+                3. Calculate the result from smaller sub problems 
+
+            # Tabulation-Method (Iterative)
+            ===============================
+                1. Handle Base Case 
+                2. Loop through the state 
+                    2.1 and Calculate the answer from smaller sub problem 
+                
+
+
+    - Problem Solving: Visualization 
+
+
+
+    - Solving with Memoization 
+
+
+    - Solving with Tabulation 
+
+
+
+
 
