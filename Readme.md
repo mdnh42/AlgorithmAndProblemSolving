@@ -518,6 +518,7 @@ A process or set of rules to be followed in calculations or other problem-solvin
 
     4. Lets Optimize 
         Optimization: 
+        Main the DP[Array] 
             
 
     5. Code 
@@ -551,7 +552,6 @@ A process or set of rules to be followed in calculations or other problem-solvin
                     2.1 and Calculate the answer from smaller sub problem 
                 
 
-
     - Problem Solving: Visualization 
 
 
@@ -563,5 +563,6 @@ A process or set of rules to be followed in calculations or other problem-solvin
 
 
 
+## Lab Class 
 
 
